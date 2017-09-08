@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Prospects</h1>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Street num</th>
+      <th>Street name</th>
+      <th>Street ord</th>
+      <th>City</th>
+      <th>Zip</th>
+      <th>State</th>
+      <th>Purchase price</th>
+      <th>Repair cost</th>
+      <th>Investor</th>
+      <th>Active Investment</th>
+      <th colspan="3" style="text-align: center">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prospects.each do |prospect| %>
+      <tr>
+        <td><%= prospect.name %></td>
+        <td><%= prospect.street_num %></td>
+        <td><%= prospect.street_name %></td>
+        <td><%= prospect.street_ord %></td>
+        <td><%= prospect.city %></td>
+        <td><%= prospect.zip %></td>
+        <td><%= prospect.state %></td>
+        <td><%= prospect.purchase_price %></td>
+        <td><%= prospect.repair_cost %></td>
+        <td><%= prospect.investor_id %></td>
+        <td><%= prospect.active %></td>
+        <td><%= link_to 'Show', prospect %></td>
+        <td><%= link_to 'Edit', edit_prospect_path(prospect) %></td>
+        <td><%= link_to 'Destroy', prospect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Prospect', new_prospect_path %>

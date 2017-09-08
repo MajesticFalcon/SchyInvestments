@@ -1,0 +1,26 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+development:
+ adapter: mysql
+ database: schyinvestments_development
+ username: rubystack
+ password: rubystack
+ host: localhost
+ socket: /opt/bitnami/mysql/tmp/mysql.sock
+test:
+ adapter: mysql
+ database: schyinvestments_test
+ username: rubystack
+ password: rubystack
+ socket: /opt/bitnami/mysql/tmp/mysql.sock
+production:
+ adapter: mysql
+ database: schyinvestments_production
+ username: rubystack
+ password: rubystack
+ socket: /opt/bitnami/mysql/tmp/mysql.sock
+

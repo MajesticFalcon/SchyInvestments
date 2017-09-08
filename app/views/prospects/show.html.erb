@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @prospect.name %>
+</p>
+
+<p>
+  <strong>Street num:</strong>
+  <%= @prospect.street_num %>
+</p>
+
+<p>
+  <strong>Street name:</strong>
+  <%= @prospect.street_name %>
+</p>
+
+<p>
+  <strong>Street ord:</strong>
+  <%= @prospect.street_ord %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @prospect.city %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @prospect.zip %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @prospect.state %>
+</p>
+
+<p>
+  <strong>Purchase price:</strong>
+  <%= @prospect.purchase_price %>
+</p>
+
+<p>
+  <strong>Repair cost:</strong>
+  <%= @prospect.repair_cost %>
+</p>
+
+<p>
+  <strong>Investor:</strong>
+  <%= @prospect.investor_id %>
+</p>
+
+<%= link_to 'Edit', edit_prospect_path(@prospect) %> |
+<%= link_to 'Back', prospects_path %>
