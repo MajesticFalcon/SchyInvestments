@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<% debug(@prospect) %>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -47,9 +47,17 @@
     <%= f.label :repair_cost %><br>
     <%= f.number_field :repair_cost %>
   </div>
-  <div class="field">
-    <%= f.label :investor_id %><br>
-    <%= f.number_field :investor_id %>
+  <div>
+    <%= f.label :investor %><br />
+    <%= f.collection_select :investor_id, Investor.all, :id, :first_name, :prompt => "Select an investor" %>
+  </div>
+  <div>
+    <%= f.label :motivation %><br />
+    <%= f.collection_select :motivation_id, Motivation.all, :id, :name, :prompt => "Select a motivation" %>
+  </div>
+  <div>
+    <%= f.label :l_survey %><br />
+    <%= f.collection_select :l_surv_ID, LSurvey.all, :id, :address, :prompt => "Select your landlord survey" %>
   </div>
   <div class="field">
     <%= f.label :active %><br>

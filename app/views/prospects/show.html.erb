@@ -50,5 +50,11 @@
   <%= @prospect.investor_id %>
 </p>
 
+<p>
+  <strong>Active:</strong>
+  <%= @prospect.active %>
+</p>
+
+
 <%= link_to 'Edit', edit_prospect_path(@prospect) %> |
 <%= link_to 'Back', prospects_path %>

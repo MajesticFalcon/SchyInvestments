@@ -5,6 +5,9 @@ class ProspectsController < ApplicationController
   # GET /prospects.json
   def index
     @prospects = Prospect.all
+    @investor = Investor.all 
+    @motivation = Motivation.all
+    @l_survey = LSurvey.all
   end
 
   # GET /prospects/1
@@ -69,6 +72,6 @@ class ProspectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prospect_params
-      params.require(:prospect).permit(:name, :street_num, :street_name, :street_ord, :city, :zip, :state, :purchase_price, :repair_cost, :investor_id)
+      params.require(:prospect).permit(:name, :street_num, :street_name, :street_ord, :city, :zip, :state, :purchase_price, :repair_cost, :investor_id, :active)
     end
 end

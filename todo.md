@@ -2,21 +2,21 @@
 ### SILA 0.0.1
 
 - [ ] Prospect
-	- [ ] Active/Inactive
-	- [ ] Link Investor(s)
-	- [ ] Link a Motivation
-	- [ ] Link a P-Scale-Item
+	- [X] Active/Inactive
+	- [X] Link Investor(s)
+	- [X] Link a Motivation
+	- [X] Link a P-Scale-Item
 	- [ ] Link a Comp-Report
 	- [ ] Link Expenses
 	- [ ] Add gross_rent
-	- [ ] Add comp_id
+	- [X] Add comp_id
 	- [ ] Add b_strat_id
 - [ ] Investor
-	- [ ] CRUD
+	- [X] CRUD
 - [ ] Motivation
-	- [ ] CRUD
+	- [X] CRUD
 - [ ] Profitablility - P-Scale-Item
-	- [ ] CRUD 
+	- [X] CRUD 
 - [ ] Comps - Comparible Houses
 	- [ ] CRUD
 - [ ] Expenses
@@ -41,15 +41,15 @@
 	- [ ] Add cash_flow
 	- [ ] Add comments
 - [ ] Landlord Survey - L-Surv
-	- [ ] Add date
-	- [ ] Add street_name
-	- [ ] Add street_num
-	- [ ] Add street_ord
-	- [ ] Add city
-	- [ ] Add zip
-	- [ ] Add state
-	- [ ] Add size
-	- [ ] Add deposit
+	- [X] Add date
+	- [X] Add street_name
+	- [X] Add street_num
+	- [X] Add street_ord
+	- [X] Add city
+	- [X] Add zip
+	- [X] Add state
+	- [X] Add size
+	- [X] Add deposit
 	- [ ] Add minimum_occupancy_timeframe
 	- [ ] Add restrictions
 	- [ ] Add rented

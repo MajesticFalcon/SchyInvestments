@@ -11,7 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908050443) do
+ActiveRecord::Schema.define(version: 20170909060840) do
+
+  create_table "investors", force: :cascade do |t|
+    t.string   "first_name",   limit: 255
+    t.string   "last_name",    limit: 255
+    t.string   "phone_number", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "l_surveys", force: :cascade do |t|
+    t.datetime "data"
+    t.integer  "street_num",             limit: 4
+    t.string   "street_ord",             limit: 255
+    t.string   "street_name",            limit: 255
+    t.string   "city",                   limit: 255
+    t.string   "zip",                    limit: 255
+    t.string   "state",                  limit: 255
+    t.integer  "size",                   limit: 4
+    t.integer  "deposit",                limit: 4
+    t.integer  "minimum_occupancy_time", limit: 4
+    t.string   "restrictions",           limit: 255
+    t.boolean  "rented"
+    t.integer  "rent",                   limit: 4
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
+
+  create_table "motivations", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "value",      limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "p_scales", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "value",      limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "prospects", force: :cascade do |t|
     t.string   "name",           limit: 255
@@ -27,6 +67,8 @@ ActiveRecord::Schema.define(version: 20170908050443) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.boolean  "active"
+    t.integer  "motivation_id",  limit: 4
+    t.integer  "l_surv_ID",      limit: 4
   end
 
 end
