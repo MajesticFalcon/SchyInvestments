@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing L Surveys</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Street num</th>
+      <th>Street ord</th>
+      <th>Street name</th>
+      <th>City</th>
+      <th>Zip</th>
+      <th>State</th>
+      <th>Size</th>
+      <th>Deposit</th>
+      <th>Minimum occupancy time</th>
+      <th>Restrictions</th>
+      <th>Rented</th>
+      <th>Rent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @l_surveys.each do |l_survey| %>
+      <tr>
+        <td><%= l_survey.data %></td>
+        <td><%= l_survey.street_num %></td>
+        <td><%= l_survey.street_ord %></td>
+        <td><%= l_survey.street_name %></td>
+        <td><%= l_survey.city %></td>
+        <td><%= l_survey.zip %></td>
+        <td><%= l_survey.state %></td>
+        <td><%= l_survey.size %></td>
+        <td><%= l_survey.deposit %></td>
+        <td><%= l_survey.minimum_occupancy_time %></td>
+        <td><%= l_survey.restrictions %></td>
+        <td><%= l_survey.rented %></td>
+        <td><%= l_survey.rent %></td>
+        <td><%= link_to 'Show', l_survey %></td>
+        <td><%= link_to 'Edit', edit_l_survey_path(l_survey) %></td>
+        <td><%= link_to 'Destroy', l_survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New L survey', new_l_survey_path %>

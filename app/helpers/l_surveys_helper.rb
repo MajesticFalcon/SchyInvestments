@@ -1,0 +1,2 @@
+module LSurveysHelper
+end

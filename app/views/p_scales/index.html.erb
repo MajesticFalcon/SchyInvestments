@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing P Scales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @p_scales.each do |p_scale| %>
+      <tr>
+        <td><%= p_scale.name %></td>
+        <td><%= p_scale.value %></td>
+        <td><%= link_to 'Show', p_scale %></td>
+        <td><%= link_to 'Edit', edit_p_scale_path(p_scale) %></td>
+        <td><%= link_to 'Destroy', p_scale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New P scale', new_p_scale_path %>

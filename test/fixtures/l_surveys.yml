@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2017-09-09 05:33:34
+  street_num: 1
+  street_ord: MyString
+  street_name: MyString
+  city: MyString
+  zip: MyString
+  state: MyString
+  size: 1
+  deposit: 1
+  minimum_occupancy_time: 1
+  restrictions: MyString
+  rented: false
+  rent: 1
+
+two:
+  data: 2017-09-09 05:33:34
+  street_num: 1
+  street_ord: MyString
+  street_name: MyString
+  city: MyString
+  zip: MyString
+  state: MyString
+  size: 1
+  deposit: 1
+  minimum_occupancy_time: 1
+  restrictions: MyString
+  rented: false
+  rent: 1

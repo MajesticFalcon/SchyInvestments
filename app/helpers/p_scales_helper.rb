@@ -1,0 +1,2 @@
+module PScalesHelper
+end
