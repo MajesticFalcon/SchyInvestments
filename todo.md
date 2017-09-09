@@ -1,0 +1,56 @@
+### SchyInvestments Landlord Application
+### SILA 0.0.1
+
+- [ ] Prospect
+	- [ ] Active/Inactive
+	- [ ] Link Investor(s)
+	- [ ] Link a Motivation
+	- [ ] Link a P-Scale-Item
+	- [ ] Link a Comp-Report
+	- [ ] Link Expenses
+	- [ ] Add gross_rent
+	- [ ] Add comp_id
+	- [ ] Add b_strat_id
+- [ ] Investor
+	- [ ] CRUD
+- [ ] Motivation
+	- [ ] CRUD
+- [ ] Profitablility - P-Scale-Item
+	- [ ] CRUD 
+- [ ] Comps - Comparible Houses
+	- [ ] CRUD
+- [ ] Expenses
+	- [ ] CRUD
+- [ ] Expense
+	- [ ] CRUD
+	- [ ] Add frequency
+	- [ ] Add cost
+- [ ] Buying Strategy - B-Strat
+	- [ ] CRUD
+	- [ ] Add max_price
+	- [ ] Add target_price
+	- [ ] Add best_price
+	- [ ] Add first_price
+	- [ ] Add max_down_payment
+	- [ ] Add first_down_payment
+	- [ ] Add financed_amount
+	- [ ] Add interest_rate
+	- [ ] Add loan_points
+	- [ ] Add term_limit
+	- [ ] Add payment
+	- [ ] Add cash_flow
+	- [ ] Add comments
+- [ ] Landlord Survey - L-Surv
+	- [ ] Add date
+	- [ ] Add street_name
+	- [ ] Add street_num
+	- [ ] Add street_ord
+	- [ ] Add city
+	- [ ] Add zip
+	- [ ] Add state
+	- [ ] Add size
+	- [ ] Add deposit
+	- [ ] Add minimum_occupancy_timeframe
+	- [ ] Add restrictions
+	- [ ] Add rented
+	- [ ] Add rent
