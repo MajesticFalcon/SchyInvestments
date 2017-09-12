@@ -1,0 +1,14 @@
+<div class='nested-fields'>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+	  <%= f.label :cost %>
+	  <%= f.number_field :value %>
+	  <%= f.label :upfront %>
+	  <%= f.check_box :upfront %>
+	  <%= f.label :frequency %>
+	  <%= f.number_field :frequency %>
+    </div>
+	  <%= link_to_remove_association "remove expense", f %>
+
+  </div>

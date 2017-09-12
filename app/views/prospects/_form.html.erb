@@ -56,9 +56,30 @@
     <%= f.collection_select :motivation_id, Motivation.all, :id, :name, :prompt => "Select a motivation" %>
   </div>
   <div>
-    <%= f.label :l_survey %><br />
-    <%= f.collection_select :l_surv_ID, LSurvey.all, :id, :address, :prompt => "Select your landlord survey" %>
+	<h4>Landlord surveys<h4>
+	<h4>Linked surveys</h4>
+		<% LSurvey.joins(:prospect).each do |survey| %>
+		
+		<% end %>
+	<h4>Available surveys</h4>
+	<ul><% LSurvey.all.each do |survey| %>
+		<%= f.label :addrses %>
+		<li>
+			<a  id="test123" > test</a>
+		</li>
+	<% end %></ul>
   </div>
+  
+  <h4>Expenses</h4>
+  <div>
+    <%= f.fields_for :expenses do |expense| %>
+      <%= render 'expense_fields', :f => expense %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add expense', f, :expenses %>
+    </div>
+  </div>
+  
   <div class="field">
     <%= f.label :active %><br>
     <%= f.check_box :active %>

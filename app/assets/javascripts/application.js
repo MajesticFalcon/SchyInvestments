@@ -15,3 +15,13 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require cocoon
+
+
+
+
+$(document).ready(function(){
+$("#test123").on("click", function(){
+    alert("SD");
+});
+});

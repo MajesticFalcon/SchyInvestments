@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170909060840) do
+ActiveRecord::Schema.define(version: 20170912033051) do
+
+  create_table "expenses", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.integer  "value",       limit: 4
+    t.boolean  "upfront"
+    t.integer  "frequency",   limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.boolean  "linked"
+    t.integer  "prospect_id", limit: 4
+  end
 
   create_table "investors", force: :cascade do |t|
     t.string   "first_name",   limit: 255
@@ -37,6 +48,7 @@ ActiveRecord::Schema.define(version: 20170909060840) do
     t.integer  "rent",                   limit: 4
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+    t.integer  "prospect_id",            limit: 4
   end
 
   create_table "motivations", force: :cascade do |t|
@@ -69,6 +81,7 @@ ActiveRecord::Schema.define(version: 20170909060840) do
     t.boolean  "active"
     t.integer  "motivation_id",  limit: 4
     t.integer  "l_surv_ID",      limit: 4
+    t.integer  "expense_id",     limit: 4
   end
 
 end

@@ -7,7 +7,7 @@
 	- [X] Link a Motivation
 	- [X] Link a P-Scale-Item
 	- [ ] Link a Comp-Report
-	- [ ] Link Expenses
+	- [X] Link Expenses
 	- [ ] Add gross_rent
 	- [X] Add comp_id
 	- [ ] Add b_strat_id
@@ -19,12 +19,10 @@
 	- [X] CRUD 
 - [ ] Comps - Comparible Houses
 	- [ ] CRUD
-- [ ] Expenses
-	- [ ] CRUD
 - [ ] Expense
-	- [ ] CRUD
-	- [ ] Add frequency
-	- [ ] Add cost
+	- [X] CRUD
+	- [X] Add frequency
+	- [X] Add cost
 - [ ] Buying Strategy - B-Strat
 	- [ ] CRUD
 	- [ ] Add max_price
