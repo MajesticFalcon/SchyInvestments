@@ -1,69 +1,82 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><td><%=notice%></td></tr>
 
-<p>
-  <strong>Data:</strong>
-  <%= @l_survey.data %>
-</p>
+<h1> Landlord Survey</h1>
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<table class="table table-striped table-bordered">
 
-<p>
-  <strong>Street num:</strong>
-  <%= @l_survey.street_num %>
-</p>
+	<tr>
+	  <th>Data:</th>
+	  <td><%=@l_survey.data%></td>
+	</tr>
 
-<p>
-  <strong>Street ord:</strong>
-  <%= @l_survey.street_ord %>
-</p>
+	<tr>
+	  <th>Street num:</th>
+	  <td><%=@l_survey.street_num%></td>
+	</tr>
 
-<p>
-  <strong>Street name:</strong>
-  <%= @l_survey.street_name %>
-</p>
+	<tr>
+	  <th>Street ord:</th>
+	  <td><%=@l_survey.street_ord%></td>
+	</tr>
 
-<p>
-  <strong>City:</strong>
-  <%= @l_survey.city %>
-</p>
+	<tr>
+	  <th>Street name:</th>
+	  <td><%=@l_survey.street_name%></td>
+	</tr>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @l_survey.zip %>
-</p>
+	<tr>
+	  <th>City:</th>
+	  <td><%=@l_survey.city%></td>
+	</tr>
 
-<p>
-  <strong>State:</strong>
-  <%= @l_survey.state %>
-</p>
+	<tr>
+	  <th>Zip:</th>
+	  <td><%=@l_survey.zip%></td>
+	</tr>
 
-<p>
-  <strong>Size:</strong>
-  <%= @l_survey.size %>
-</p>
+	<tr>
+	  <th>State:</th>
+	  <td><%=@l_survey.state%></td>
+	</tr>
 
-<p>
-  <strong>Deposit:</strong>
-  <%= @l_survey.deposit %>
-</p>
+	<tr>
+	  <th>Size:</th>
+	  <td><%=@l_survey.size%></td>
+	</tr>
 
-<p>
-  <strong>Minimum occupancy time:</strong>
-  <%= @l_survey.minimum_occupancy_time %>
-</p>
+	<tr>
+	  <th>Deposit:</th>
+	  <td><%=@l_survey.deposit%></td>
+	</tr>
 
-<p>
-  <strong>Restrictions:</strong>
-  <%= @l_survey.restrictions %>
-</p>
+	<tr>
+	  <th>Minimum occupancy time:</th>
+	  <td><%=@l_survey.minimum_occupancy_time%></td>
+	</tr>
 
-<p>
-  <strong>Rented:</strong>
-  <%= @l_survey.rented %>
-</p>
+	<tr>
+	  <th>Restrictions:</th>
+	  <td><%=@l_survey.restrictions%></td>
+	</tr>
 
-<p>
-  <strong>Rent:</strong>
-  <%= @l_survey.rent %>
-</p>
+	<tr>
+	  <th>Rented:</th>
+	  <td><%=@l_survey.rented%></td>
+	</tr>
 
-<%= link_to 'Edit', edit_l_survey_path(@l_survey) %> |
-<%= link_to 'Back', l_surveys_path %>
+	<tr>
+	  <th>Rent:</th>
+	  <td><%=@l_survey.rent%></td>
+	</tr>
+	
+	<tr>
+		<td><%=link_to 'Edit', edit_l_survey_path(@l_survey), class: "btn btn-primary" %>
+		<%=link_to 'Back', l_surveys_path, class: "btn btn-info" %></td>
+	</tr>
+
+
+</table>
+
+</div>
+</div>

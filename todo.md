@@ -1,4 +1,27 @@
 ### SchyInvestments Landlord Application
+
+
+
+
+
+### SILA 0.0.2
+###
+
+- [X] Menu Bar
+	- [X] Prospects
+	- [X] Investors
+	- [X] Motivations
+	- [X] P-Scales
+	- [X] L-Surveys
+	- [X] Investors
+- [ ] Bootstrapify
+	- [ ] Prospects
+	- [ ] Investors
+	- [ ] Motivations
+	- [ ] P-Scales
+	- [ ] L-Surveys
+	- [ ] Investors
+
 ### SILA 0.0.1
 
 - [X] Prospect
