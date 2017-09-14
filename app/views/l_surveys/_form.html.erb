@@ -63,6 +63,10 @@
     <%= f.label :rent %><br>
     <%= f.number_field :rent %>
   </div>
+  <div>
+    <%= f.label :prospect %><br />
+    <%= f.collection_select :prospect_id, Prospect.all, :id, :name, :prompt => "Select a prospect" %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

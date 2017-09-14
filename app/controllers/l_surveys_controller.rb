@@ -69,6 +69,6 @@ class LSurveysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def l_survey_params
-      params.require(:l_survey).permit(:data, :street_num, :street_ord, :street_name, :city, :zip, :state, :size, :deposit, :minimum_occupancy_time, :restrictions, :rented, :rent)
+      params.require(:l_survey).permit(:data, :street_num, :street_ord, :street_name, :city, :zip, :state, :size, :deposit, :minimum_occupancy_time, :restrictions, :rented, :rent, :prospect_id)
     end
 end

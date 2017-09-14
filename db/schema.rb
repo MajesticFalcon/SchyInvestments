@@ -11,7 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170912033051) do
+ActiveRecord::Schema.define(version: 20170914004431) do
+
+  create_table "b_strategies", force: :cascade do |t|
+    t.integer  "max_price",          limit: 4
+    t.integer  "target_price",       limit: 4
+    t.integer  "best_price",         limit: 4
+    t.integer  "first_price",        limit: 4
+    t.integer  "max_down_payment",   limit: 4
+    t.integer  "first_down_payment", limit: 4
+    t.integer  "financed_amount",    limit: 4
+    t.integer  "interest_rate",      limit: 4
+    t.integer  "loan_points",        limit: 4
+    t.integer  "term_limit",         limit: 4
+    t.integer  "payment",            limit: 4
+    t.integer  "cash_flow",          limit: 4
+    t.string   "comments",           limit: 255
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "prospect_id",        limit: 4
+  end
+
+  create_table "comps", force: :cascade do |t|
+    t.integer  "street_num",     limit: 4
+    t.string   "street_name",    limit: 255
+    t.string   "street_ord",     limit: 255
+    t.string   "city",           limit: 255
+    t.string   "state",          limit: 255
+    t.integer  "zip",            limit: 4
+    t.integer  "purchase_price", limit: 4
+    t.integer  "prospect_id",    limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "comps", ["prospect_id"], name: "index_comps_on_prospect_id", using: :btree
 
   create_table "expenses", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -82,6 +116,9 @@ ActiveRecord::Schema.define(version: 20170912033051) do
     t.integer  "motivation_id",  limit: 4
     t.integer  "l_surv_ID",      limit: 4
     t.integer  "expense_id",     limit: 4
+    t.integer  "b_strategy_id",  limit: 4
+    t.integer  "gross_rent",     limit: 4
   end
 
+  add_foreign_key "comps", "prospects"
 end

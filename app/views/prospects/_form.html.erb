@@ -47,6 +47,10 @@
     <%= f.label :repair_cost %><br>
     <%= f.number_field :repair_cost %>
   </div>
+  <div class="field">
+    <%= f.label :gross_rent %><br>
+    <%= f.number_field :gross_rent %>
+  </div>
   <div>
     <%= f.label :investor %><br />
     <%= f.collection_select :investor_id, Investor.all, :id, :first_name, :prompt => "Select an investor" %>
@@ -57,19 +61,26 @@
   </div>
   <div>
 	<h4>Landlord surveys<h4>
-	<h4>Linked surveys</h4>
-		<% LSurvey.joins(:prospect).each do |survey| %>
-		
-		<% end %>
-	<h4>Available surveys</h4>
-	<ul><% LSurvey.all.each do |survey| %>
-		<%= f.label :addrses %>
-		<li>
-			<a  id="test123" > test</a>
-		</li>
-	<% end %></ul>
+		<ul><% LSurvey.joins(:prospect).each do |survey| %>
+			<li><%= link_to survey.address, edit_l_survey_path %></li>
+		<% end %></ul>
+		<%= link_to "Link a survey", l_surveys_path %>
+  </div>
+  <div>
+	<h4>Comparible houses<h4>
+		<ul><% @prospect.comps.each do |comp| %>
+			<li><%= link_to comp.address, edit_comp_path %></li>
+		<% end %></ul>
+		<%= link_to "Link a comp", comp_path %>
   </div>
   
+  <div>
+    <%= f.label :buying_strategy %><br />
+    <% if !@prospect.b_strategy.nil? %>
+	<%= link_to "Edit buying strategy", edit_b_strategy_path(@prospect.b_strategy) %>
+	<% else %>
+	<%= link_to "Create buying strategy", new_b_strategy_path %>
+	<% end %>
   <h4>Expenses</h4>
   <div>
     <%= f.fields_for :expenses do |expense| %>

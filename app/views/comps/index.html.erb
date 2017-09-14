@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Comps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Street num</th>
+      <th>Street name</th>
+      <th>Street ord</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Purchase price</th>
+      <th>Prospect</th>
+      <th>Prospect</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comps.each do |comp| %>
+      <tr>
+        <td><%= comp.street_num %></td>
+        <td><%= comp.street_name %></td>
+        <td><%= comp.street_ord %></td>
+        <td><%= comp.city %></td>
+        <td><%= comp.state %></td>
+        <td><%= comp.zip %></td>
+        <td><%= comp.purchase_price %></td>
+        <td><%= comp.prospect_id %></td>
+        <td><%= comp.prospect %></td>
+        <td><%= link_to 'Show', comp %></td>
+        <td><%= link_to 'Edit', edit_comp_path(comp) %></td>
+        <td><%= link_to 'Destroy', comp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comp', new_comp_path %>

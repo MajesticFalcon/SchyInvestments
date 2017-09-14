@@ -1,0 +1,73 @@
+<%= form_for(@b_strategy) do |f| %>
+  <% if @b_strategy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@b_strategy.errors.count, "error") %> prohibited this b_strategy from being saved:</h2>
+
+      <ul>
+      <% @b_strategy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :max_price %><br>
+    <%= f.number_field :max_price %>
+  </div>
+  <div class="field">
+    <%= f.label :target_price %><br>
+    <%= f.number_field :target_price %>
+  </div>
+  <div class="field">
+    <%= f.label :best_price %><br>
+    <%= f.number_field :best_price %>
+  </div>
+  <div class="field">
+    <%= f.label :first_price %><br>
+    <%= f.number_field :first_price %>
+  </div>
+  <div class="field">
+    <%= f.label :max_down_payment %><br>
+    <%= f.number_field :max_down_payment %>
+  </div>
+  <div class="field">
+    <%= f.label :first_down_payment %><br>
+    <%= f.number_field :first_down_payment %>
+  </div>
+  <div class="field">
+    <%= f.label :financed_amount %><br>
+    <%= f.number_field :financed_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :interest_rate %><br>
+    <%= f.number_field :interest_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_points %><br>
+    <%= f.number_field :loan_points %>
+  </div>
+  <div class="field">
+    <%= f.label :term_limit %><br>
+    <%= f.number_field :term_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :payment %><br>
+    <%= f.number_field :payment %>
+  </div>
+  <div class="field">
+    <%= f.label :cash_flow %><br>
+    <%= f.number_field :cash_flow %>
+  </div>
+  <div>
+    <%= f.label :prospect %><br />
+    <%= f.collection_select :prospect_id, Prospect.all, :id, :address, :prompt => "Select a prospect" %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.text_field :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

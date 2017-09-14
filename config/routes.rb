@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :comps
+  resources :b_strategies
   resources :expenses
   resources :l_surveys
   resources :p_scales

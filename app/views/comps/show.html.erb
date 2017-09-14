@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Street num:</strong>
+  <%= @comp.street_num %>
+</p>
+
+<p>
+  <strong>Street name:</strong>
+  <%= @comp.street_name %>
+</p>
+
+<p>
+  <strong>Street ord:</strong>
+  <%= @comp.street_ord %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @comp.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @comp.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @comp.zip %>
+</p>
+
+<p>
+  <strong>Purchase price:</strong>
+  <%= @comp.purchase_price %>
+</p>
+
+<p>
+  <strong>Prospect:</strong>
+  <%= @comp.prospect_id %>
+</p>
+
+<p>
+  <strong>Prospect:</strong>
+  <%= @comp.prospect %>
+</p>
+
+<%= link_to 'Edit', edit_comp_path(@comp) %> |
+<%= link_to 'Back', comps_path %>

@@ -1,44 +1,45 @@
 ### SchyInvestments Landlord Application
 ### SILA 0.0.1
 
-- [ ] Prospect
+- [X] Prospect
 	- [X] Active/Inactive
 	- [X] Link Investor(s)
 	- [X] Link a Motivation
 	- [X] Link a P-Scale-Item
-	- [ ] Link a Comp-Report
+	- [X] Link a Comp
+	- [X] Link Landlord Surveys
 	- [X] Link Expenses
-	- [ ] Add gross_rent
+	- [X] Add gross_rent
 	- [X] Add comp_id
-	- [ ] Add b_strat_id
-- [ ] Investor
+	- [X] Add b_strategy_id
+- [X] Investor
 	- [X] CRUD
-- [ ] Motivation
+- [X] Motivation
 	- [X] CRUD
-- [ ] Profitablility - P-Scale-Item
+- [X] Profitablility - P-Scale-Item
 	- [X] CRUD 
-- [ ] Comps - Comparible Houses
-	- [ ] CRUD
-- [ ] Expense
+- [X] Comps - Comparible Houses
+	- [X] CRUD
+- [X] Expense
 	- [X] CRUD
 	- [X] Add frequency
 	- [X] Add cost
-- [ ] Buying Strategy - B-Strat
-	- [ ] CRUD
-	- [ ] Add max_price
-	- [ ] Add target_price
-	- [ ] Add best_price
-	- [ ] Add first_price
-	- [ ] Add max_down_payment
-	- [ ] Add first_down_payment
-	- [ ] Add financed_amount
-	- [ ] Add interest_rate
-	- [ ] Add loan_points
-	- [ ] Add term_limit
-	- [ ] Add payment
-	- [ ] Add cash_flow
-	- [ ] Add comments
-- [ ] Landlord Survey - L-Surv
+- [X] Buying Strategy - B-Strat
+	- [X] CRUD
+	- [X] Add max_price
+	- [X] Add target_price
+	- [X] Add best_price
+	- [X] Add first_price
+	- [X] Add max_down_payment
+	- [X] Add first_down_payment
+	- [X] Add financed_amount
+	- [X] Add interest_rate
+	- [X] Add loan_points
+	- [X] Add term_limit
+	- [X] Add payment
+	- [X] Add cash_flow
+	- [X] Add comments
+- [X] Landlord Survey - L-Surv
 	- [X] Add date
 	- [X] Add street_name
 	- [X] Add street_num
@@ -48,7 +49,7 @@
 	- [X] Add state
 	- [X] Add size
 	- [X] Add deposit
-	- [ ] Add minimum_occupancy_timeframe
-	- [ ] Add restrictions
-	- [ ] Add rented
-	- [ ] Add rent
+	- [X] Add minimum_occupancy_timeframe
+	- [X] Add restrictions
+	- [X] Add rented
+	- [X] Add rent

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  max_price: 1
+  target_price: 1
+  best_price: 1
+  first_price: 1
+  max_down_payment: 1
+  first_down_payment: 1
+  financed_amount: 1
+  interest_rate: 1
+  loan_points: 1
+  term_limit: 1
+  payment: 1
+  cash_flow: 1
+  comments: MyString
+
+two:
+  max_price: 1
+  target_price: 1
+  best_price: 1
+  first_price: 1
+  max_down_payment: 1
+  first_down_payment: 1
+  financed_amount: 1
+  interest_rate: 1
+  loan_points: 1
+  term_limit: 1
+  payment: 1
+  cash_flow: 1
+  comments: MyString

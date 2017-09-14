@@ -1,0 +1,49 @@
+<%= form_for(@comp) do |f| %>
+  <% if @comp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comp.errors.count, "error") %> prohibited this comp from being saved:</h2>
+
+      <ul>
+      <% @comp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :street_num %><br>
+    <%= f.number_field :street_num %>
+  </div>
+  <div class="field">
+    <%= f.label :street_name %><br>
+    <%= f.text_field :street_name %>
+  </div>
+  <div class="field">
+    <%= f.label :street_ord %><br>
+    <%= f.text_field :street_ord %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.number_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_price %><br>
+    <%= f.number_field :purchase_price %>
+  </div>
+  <div>
+    <%= f.label :prospect %><br />
+    <%= f.collection_select :prospect_id, Prospect.all, :id, :address, :prompt => "Select a prospect" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
