@@ -1,24 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @investor.first_name %>
-</p>
+<h1> Investor </h1>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @investor.last_name %>
-</p>
+<table class="table table-striped table-bordered">
+	<tr>
+		<th>
+			<strong>First name:</strong>
+		</th>
+		<td>
+			<%= @investor.first_name %>
+		</td>
+	</p>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @investor.phone_number %>
-</p>
+	<tr>
+		<th>  
+			<strong>Last name:</strong>
+		</th>
+		<td>
+			<%= @investor.last_name %>
+		</td>
+	</tr>
 
-<p>
-  <strong>Id:</strong>
-  <%= @investor.id %>
-</p>
+	<tr>
+		<th> 
+			<strong>Phone number:</strong>
+		</th>
+		<td>
+		<%= @investor.phone_number %>
+		</td>
+	</tr>
 
+	<tr>
+		<th>
+			<strong>Id:</strong>
+		</th>
+		<td>
+			<%= @investor.id %>
+		</td>
+	</tr>
+</table>
 <%= link_to 'Edit', edit_investor_path(@investor) %> |
 <%= link_to 'Back', investors_path %>

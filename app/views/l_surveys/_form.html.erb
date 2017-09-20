@@ -9,65 +9,141 @@
       <% end %>
       </ul>
     </div>
+	
   <% end %>
+<table class="table table-striped table-bordered">
 
-  <div class="field">
-    <%= f.label :data %><br>
-    <%= f.datetime_select :data %>
-  </div>
-  <div class="field">
-    <%= f.label :street_num %><br>
-    <%= f.number_field :street_num %>
-  </div>
-  <div class="field">
-    <%= f.label :street_ord %><br>
-    <%= f.text_field :street_ord %>
-  </div>
-  <div class="field">
-    <%= f.label :street_name %><br>
-    <%= f.text_field :street_name %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :size %><br>
-    <%= f.number_field :size %>
-  </div>
-  <div class="field">
-    <%= f.label :deposit %><br>
-    <%= f.number_field :deposit %>
-  </div>
-  <div class="field">
-    <%= f.label :minimum_occupancy_time %><br>
-    <%= f.number_field :minimum_occupancy_time %>
-  </div>
-  <div class="field">
-    <%= f.label :restrictions %><br>
-    <%= f.text_field :restrictions %>
-  </div>
-  <div class="field">
-    <%= f.label :rented %><br>
-    <%= f.check_box :rented %>
-  </div>
-  <div class="field">
-    <%= f.label :rent %><br>
-    <%= f.number_field :rent %>
-  </div>
-  <div>
-    <%= f.label :prospect %><br />
-    <%= f.collection_select :prospect_id, Prospect.all, :id, :name, :prompt => "Select a prospect" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+	<tr>
+		<th>
+			<%= f.label :data %>
+		</th>
+		<td>
+			<%= f.datetime_select :data %>
+		</td>
+
+	</tr>
+
+	<tr>
+		<th>
+			<%= f.label :street_num %>
+		</th>
+		<td>
+			<%= f.number_field :street_num, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :street_ord %>
+		</th>
+		<td>
+			<%= f.text_field :street_ord, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :street_name %>
+		</th>
+		<td>
+			<%= f.text_field :street_name, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :city %>
+		</th>
+		<td>
+			<%= f.text_field :city, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :zip %>
+		</th>
+		<td>
+			<%= f.text_field :zip, class: "form-control" %>
+		</td>
+	</tr>
+
+	<tr>
+		<th>
+		<%= f.label :state %>
+		</th>
+		<td>
+			<%= f.text_field :state, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :size %>
+		</th>
+		<td>
+			<%= f.number_field :size, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :deposit %>
+		</th>
+		<td>
+			<%= f.number_field :deposit, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :minimum_occupancy_time %>
+		</th>
+		<td>
+			<%= f.number_field :minimum_occupancy_time, class: "form-control" %>
+		</td>
+	</tr>
+
+	<tr>
+		<th>
+			<%= f.label :restrictions %>
+		</th>
+		<td>
+			<%= f.text_field :restrictions, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :rented %>
+		</th>
+		<td>
+			<%= f.check_box :rented, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :rent %>
+		</th>
+		<td>
+			<%= f.number_field :rent, class: "form-control" %>
+		</td>
+	</tr>
+	
+	<tr>
+		<th>
+			<%= f.label :prospect %>
+		</th>
+		<td>
+			<%= f.collection_select :prospect_id, Prospect.all, :id, :name, {:prompt => "Select a prospect"}, {class: "form-control"} %>
+		</td>
+	</tr>
+
+	<tr>
+		<th>Actions</th>
+		<td><%= f.submit "Submit", class: "btn btn-primary" %></td>
+	</tr>
+</table>
 <% end %>
