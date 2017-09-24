@@ -16,10 +16,15 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require cocoon
-
+//= require bower_components/gmap3/dist/gmap3.min
 //THIS TOOK ME TWO HOURS TO WRITE. SO BS
+
+
 $(document).ready(function() {
     $("a.add_fields").
       data("association-insertion-method", 'after').
       data("association-insertion-node", '.nested-fields');
 });
+
+
+

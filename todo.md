@@ -15,13 +15,17 @@
 	- [X] L-Surveys
 	- [X] Investors
 - [ ] Bootstrapify
-	- [ ] Prospects
-	- [ ] Investors
-	- [ ] Motivations
+	- [X] Prospects
+	- [X] Investors
+	- [] Motivations
 	- [ ] P-Scales
 	- [ ] L-Surveys
 	- [ ] Investors
-
+- [ ] Google Maps
+	- [ ] Home Screen
+	- [ ] Prospect
+	- [ ] Fix CSS loading
+	
 ### SILA 0.0.1
 
 - [X] Prospect
