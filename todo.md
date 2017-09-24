@@ -45,6 +45,7 @@
 	- [ ] Prospect
 	- [ ] Fix CSS loading
 	- [ ] Add Markers for all Prospects
+<<<<<<< HEAD
 - [X] Users
 	- [X] CRUD
 	- [X] Login Screen
@@ -52,6 +53,16 @@
 - [X] Header
   - [X] Sign up/in/out
   - [X] Home
+=======
+- [ ] Users
+	- [ ] CRUD
+	- [ ] Administrator
+	- [ ] Login Screen
+	- [ ] Implement Per User Functionality
+	- [ ] Add GMaps Overlay Of User Desired Coverage 
+- [ ] Readme.rdoc
+	- [ ] Update
+>>>>>>> fcb7ca0... Update todo.md
 ### SILA 0.0.1
 
 - [X] Prospect
