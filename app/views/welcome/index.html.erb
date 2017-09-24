@@ -1,0 +1,43 @@
+<%= javascript_include_tag "http://maps.google.com/maps/api/js" %>
+
+
+<br>
+<div class="panel panel-default">
+	<div class="panel-body"> 
+		<h1> Schy Networks Presents </h1>
+		<h3> Investment Landlord Application </h3>
+	</div>
+</div>
+<br>
+
+<table class="table table-striped table-bordered SD">
+	<tr>
+		<th>Prospects</th>
+		<th>Investors</th>
+		<th>Motivations</th>
+		<th>Profitability Scales</th>
+		<th>Landlord Surveys</th>
+		<th>Recently Posted Cragslist Houses</th>
+		<th>Recently Zillow Cragslist Houses</th>
+	</tr>
+	
+	<tr>
+		<td><%= Prospect.all.size %></td>
+		<td><%= Investor.all.size %></td>
+		<td><%= Motivation.all.size %></td>
+		<td><%= PScale.all.size %></td>
+		<td><%= LSurvey.all.size %></td>
+
+		
+	</tr>
+
+</table>
+<style>
+
+</style>
+<div class="map"></div>
+  
+<%= javascript_include_tag "welcome" %>
+
+
+

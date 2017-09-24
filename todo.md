@@ -1,8 +1,22 @@
 ### SchyInvestments Landlord Application
 
 
+### Future
 
-
+- [	] Craigslist
+	- [ ] Pull Houses
+	- [ ] Sort Houses
+	- [ ] Plot New Houses Method
+- [ ] Zillow
+	- [ ] Pull Houses	
+	- [ ] Sort Houses
+	- [ ] Plot New Houses Method
+- [ ] Site
+	- [ ] Add BS Labels vs Booleans
+	- [ ] Add Logos
+	- [ ] Contact Page
+	- [ ] About Us
+	- [ ] Fix Table Checkboxs
 
 ### SILA 0.0.2
 ###
@@ -21,10 +35,18 @@
 	- [ ] P-Scales
 	- [ ] L-Surveys
 	- [ ] Investors
+	- [ ] Edit Template
 - [ ] Google Maps
 	- [ ] Home Screen
 	- [ ] Prospect
 	- [ ] Fix CSS loading
+	- [ ] Add Markers for all Prospects
+- [ ] Users
+	- [ ] CRUD
+	- [ ] Administrator
+	- [ ] Login Screen
+	- [ ] Implement Per User Functionality
+	- [ ] Add GMaps Overlay Of User Desired Coverage 
 	
 ### SILA 0.0.1
 
