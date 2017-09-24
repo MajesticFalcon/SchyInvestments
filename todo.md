@@ -47,7 +47,8 @@
 	- [ ] Login Screen
 	- [ ] Implement Per User Functionality
 	- [ ] Add GMaps Overlay Of User Desired Coverage 
-	
+- [ ] Readme.rdoc
+	- [ ] Update
 ### SILA 0.0.1
 
 - [X] Prospect
