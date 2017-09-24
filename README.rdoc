@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/MajesticFalcon/SchyInvestments/master/logo.png)
+![alt text](https://github.com/MajesticFalcon/SchyInvestments/blob/master/SchyNetworks.png)
 
 == README
 
