@@ -77,7 +77,7 @@
 		<th>Landlord surveys
 		<td>
 			<ul><% LSurvey.joins(:prospect).each do |survey| %>
-					<li><%= link_to survey.address, edit_l_survey_path %></li>
+					<li><%= link_to survey.address, edit_l_survey_path(survey) %></li>
 				<% end %>
 			</ul>
 			<%= link_to "Link a survey", l_surveys_path %>
@@ -87,9 +87,9 @@
 		<th>Comps</th>
 		<td>
 			<ul><% @prospect.comps.each do |comp| %>
-				<li><%= link_to comp.address, edit_comp_path %></li>
+				<li><%= link_to comp.address, edit_comp_path(comp) %></li>
 			<% end %></ul>
-			<%= link_to "Link a comp", comp_path %>
+			<%= link_to "Link a comp", comps_path %>
 		</td>
 	  </tr>
 	  

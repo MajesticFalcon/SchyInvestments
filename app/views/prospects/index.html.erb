@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Prospects</h1>
+<h1>Prospects</h1><%= link_to 'Create', new_prospect_path, class: "label label-success" %>
+
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
@@ -38,10 +39,12 @@
 	  Open
         <% end %>
 	</td>
+      <% if prospect.user == current_user %>
         <td><%= prospect.active %></td>
         <td><%= link_to 'Show', prospect %></td>
         <td><%= link_to 'Edit', edit_prospect_path(prospect) %></td>
         <td><%= link_to 'Destroy', prospect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>

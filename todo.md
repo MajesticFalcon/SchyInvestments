@@ -17,7 +17,12 @@
 	- [ ] Contact Page
 	- [ ] About Us
 	- [ ] Fix Table Checkboxs
-
+- [ ] Users
+	- [ ] Administrator section
+	- [ ] Add GMaps Overlay Of User Desired Coverage 
+  - [ ] Login Failure
+  - [ ] Password Complexity
+  - [ ] Location Information
 ### SILA 0.0.2
 ###
 
@@ -28,26 +33,25 @@
 	- [X] P-Scales
 	- [X] L-Surveys
 	- [X] Investors
-- [ ] Bootstrapify
+- [X] Bootstrapify
 	- [X] Prospects
 	- [X] Investors
-	- [] Motivations
-	- [ ] P-Scales
-	- [ ] L-Surveys
-	- [ ] Investors
-	- [ ] Edit Template
+	- [X] Motivations
+	- [X] P-Scales
+	- [X] L-Surveys
+	- [X] Edit Template
 - [ ] Google Maps
 	- [ ] Home Screen
 	- [ ] Prospect
 	- [ ] Fix CSS loading
 	- [ ] Add Markers for all Prospects
-- [ ] Users
-	- [ ] CRUD
-	- [ ] Administrator
-	- [ ] Login Screen
-	- [ ] Implement Per User Functionality
-	- [ ] Add GMaps Overlay Of User Desired Coverage 
-	
+- [X] Users
+	- [X] CRUD
+	- [X] Login Screen
+	- [X] Implement Per User Functionality
+- [X] Header
+  - [X] Sign up/in/out
+  - [X] Home
 ### SILA 0.0.1
 
 - [X] Prospect

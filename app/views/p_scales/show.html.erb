@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @p_scale.name %>
-</p>
+<h2>Profit Scale</h2>
 
-<p>
-  <strong>Value:</strong>
-  <%= @p_scale.value %>
-</p>
+<table class="table table-striped table-bordered" >
+  <tr>
+    <th>Name:</th>
+    <td><%= @p_scale.name %></td>
+  </tr>
+  <tr>
+    <th>Value:</th>
+    <td><%= @p_scale.value %></td>
+  </tr>
+</table>
 
-<%= link_to 'Edit', edit_p_scale_path(@p_scale) %> |
+
+
+<%= link_to 'Edit', edit_p_scale_path(@p_scale) %>
 <%= link_to 'Back', p_scales_path %>

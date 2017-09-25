@@ -10,16 +10,21 @@
       </ul>
     </div>
   <% end %>
+  
+  <table class="table table-striped table-bordered">
+    <tr>
+      <th>    <%= f.label :name %></th>
+      <td>    <%= f.text_field :name, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :value %></th>
+      <td>    <%= f.number_field :value, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th>Actions</th>
+      <td>    <%= f.submit "Submit", class: "btn btn-primary" %></td>
+    </tr>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :value %><br>
-    <%= f.number_field :value %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </table>
+  
 <% end %>

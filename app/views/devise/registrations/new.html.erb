@@ -1,0 +1,54 @@
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+<div class="row centered-form">
+  <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+    <img src="/logo.png" alt="Responsive image" class="img-rounded">
+  </div>
+</div>
+<div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Please sign up <small>It's free!</small></h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                      <%= f.text_field :first_name, autofocus: false, class: "form-control", placeholder: "First Name" %>
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                      <%= f.text_field :last_name, autofocus: false, class: "form-control", placeholder: "Last Name" %>
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+                  <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                       <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control" %>			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password", class: "form-control" %>
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+                <%= f.submit "Register", class: "btn btn-primary btn-block" %>
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+      <% end %>

@@ -1,0 +1,39 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+<div class="row centered-form">
+  <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+    <img src="/logo.png" alt="Responsive image" class="img-rounded">
+  </div>
+</div>
+<div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Please sign in</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+
+			    			<div class="form-group">
+                  <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-12 col-sm-12 col-md-12">
+			    					<div class="form-group">
+                      <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control" %>			    					
+                    </div>
+                      <%= f.submit "Sign In", class: "btn btn-primary btn-block" %>
+
+                  </div>
+			    			</div>
+			    			
+                <%= render "devise/shared/links" %>
+
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+      <% end %>

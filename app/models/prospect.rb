@@ -7,6 +7,7 @@ class Prospect < ActiveRecord::Base
   has_many :expenses
   has_one :b_strategy
   has_many :comps
+  belongs_to :user
   def address
     "#{street_num} #{street_ord} #{street_name}"
   end

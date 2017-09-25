@@ -4,7 +4,7 @@ class PScalesController < ApplicationController
   # GET /p_scales
   # GET /p_scales.json
   def index
-    @p_scales = PScale.all
+    @p_scales = current_user.p_scales
   end
 
   # GET /p_scales/1

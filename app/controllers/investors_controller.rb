@@ -4,7 +4,7 @@ class InvestorsController < ApplicationController
   # GET /investors
   # GET /investors.json
   def index
-    @investors = Investor.all
+    @investors = current_user.investors
   end
 
   # GET /investors/1

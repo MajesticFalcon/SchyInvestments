@@ -4,7 +4,7 @@ class LSurveysController < ApplicationController
   # GET /l_surveys
   # GET /l_surveys.json
   def index
-    @l_surveys = LSurvey.all
+    @l_surveys = current_user.l_surveys
   end
 
   # GET /l_surveys/1
