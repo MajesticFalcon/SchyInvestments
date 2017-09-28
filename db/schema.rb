@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925042728) do
+ActiveRecord::Schema.define(version: 20170928033803) do
 
   create_table "b_strategies", force: :cascade do |t|
     t.integer  "max_price",          limit: 4
@@ -123,6 +123,8 @@ ActiveRecord::Schema.define(version: 20170925042728) do
     t.integer  "b_strategy_id",  limit: 4
     t.integer  "gross_rent",     limit: 4
     t.integer  "user_id",        limit: 4
+    t.float    "longitude",      limit: 24
+    t.float    "latitude",       limit: 24
   end
 
   create_table "users", force: :cascade do |t|

@@ -18,6 +18,8 @@ gem 'thin'
 gem 'mysql'
 gem 'cocoon'
 gem 'devise', '~> 4.2'
+gem 'gmaps4rails'
+gem 'geocoder', '~> 1.3', '>= 1.3.7'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
