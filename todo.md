@@ -40,6 +40,8 @@
 	- [X] P-Scales
 	- [X] L-Surveys
 	- [X] Edit Template
+  - [X] BStrats
+  - [ ] Comps
 - [ ] Google Maps
 	- [ ] Home Screen
 	- [ ] Prospect
@@ -48,10 +50,13 @@
 - [X] Users
 	- [X] CRUD
 	- [X] Login Screen
-	- [X] Implement Per User Functionality
+	- [ ] Implement Per User Functionality
 - [X] Header
   - [X] Sign up/in/out
   - [X] Home
+- [ ] HotFix
+  - [ ] Expenses Dynamic Render
+  - [ ] Linked Landlord Surveys
 - [ ] Readme.rdoc
 	- [ ] Update
 ### SILA 0.0.1

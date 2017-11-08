@@ -76,7 +76,7 @@
 	  <tr>
 		<th>Landlord surveys
 		<td>
-			<ul><% LSurvey.joins(:prospect).each do |survey| %>
+			<ul><% current_user.l_surveys.joins(:prospect).each do |survey| %>
 					<li><%= link_to survey.address, edit_l_survey_path(survey) %></li>
 				<% end %>
 			</ul>

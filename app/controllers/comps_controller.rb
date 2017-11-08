@@ -4,7 +4,7 @@ class CompsController < ApplicationController
   # GET /comps
   # GET /comps.json
   def index
-    @comps = Comp.all
+    @comps = current_user.comps
   end
 
   # GET /comps/1
@@ -24,7 +24,7 @@ class CompsController < ApplicationController
   # POST /comps
   # POST /comps.json
   def create
-    @comp = Comp.new(comp_params)
+    @comp = current_user.comps.build(comp_params)
 
     respond_to do |format|
       if @comp.save

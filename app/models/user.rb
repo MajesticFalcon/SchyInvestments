@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   has_many :motivations
   has_many :p_scales
   has_many :l_surveys
+  has_many :comps
 end

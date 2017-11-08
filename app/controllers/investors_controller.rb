@@ -24,7 +24,7 @@ class InvestorsController < ApplicationController
   # POST /investors
   # POST /investors.json
   def create
-    @investor = Investor.new(investor_params)
+    @investor = current_user.investors.build(investor_params)
 
     respond_to do |format|
       if @investor.save

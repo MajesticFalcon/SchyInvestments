@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170928033803) do
+ActiveRecord::Schema.define(version: 20171104230207) do
 
   create_table "b_strategies", force: :cascade do |t|
     t.integer  "max_price",          limit: 4
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170928033803) do
     t.integer  "prospect_id",    limit: 4
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.integer  "user_id",        limit: 4
   end
 
   add_index "comps", ["prospect_id"], name: "index_comps_on_prospect_id", using: :btree
