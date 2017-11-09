@@ -23,7 +23,7 @@
 $(document).ready(function() {
     $("a.add_fields").
       data("association-insertion-method", 'after').
-      data("association-insertion-node", '.nested-fields');
+      data("association-insertion-node", '.add_sub_task');
 });
 
 

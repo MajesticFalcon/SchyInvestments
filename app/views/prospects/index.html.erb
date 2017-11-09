@@ -12,8 +12,6 @@
       <th>City</th>
       <th>Zip</th>
       <th>State</th>
-      <th>Purchase price</th>
-      <th>Repair cost</th>
       <th>Investor</th>
       <th>Active Investment</th>
       <th colspan="3" style="text-align: center">Actions</th>
@@ -30,8 +28,6 @@
         <td><%= prospect.city %></td>
         <td><%= prospect.zip %></td>
         <td><%= prospect.state %></td>
-        <td><%= prospect.purchase_price %></td>
-        <td><%= prospect.repair_cost %></td>
 	<td>
 	<% unless prospect.investor.nil? %>
           <%= prospect.investor.first_name %>

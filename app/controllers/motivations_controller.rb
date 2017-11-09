@@ -4,7 +4,7 @@ class MotivationsController < ApplicationController
   # GET /motivations
   # GET /motivations.json
   def index
-    @motivations = current_user.motivations
+    @motivations = Motivation.all
   end
 
   # GET /motivations/1

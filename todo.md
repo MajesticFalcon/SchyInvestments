@@ -23,6 +23,13 @@
   - [ ] Login Failure
   - [ ] Password Complexity
   - [ ] Location Information
+- [ ] Google Maps
+	- [ ] Home Screen
+	- [ ] Prospect
+	- [ ] Fix CSS loading
+	- [ ] Add Markers for all Prospects
+- [ ] HotFix
+  - [ ] Expenses Dynamic Render
 ### SILA 0.0.2
 ###
 
@@ -41,24 +48,18 @@
 	- [X] L-Surveys
 	- [X] Edit Template
   - [X] BStrats
-  - [ ] Comps
-- [ ] Google Maps
-	- [ ] Home Screen
-	- [ ] Prospect
-	- [ ] Fix CSS loading
-	- [ ] Add Markers for all Prospects
+  - [X] Comps
 - [X] Users
 	- [X] CRUD
 	- [X] Login Screen
-	- [ ] Implement Per User Functionality
+	- [X] Implement Per User Functionality
 - [X] Header
   - [X] Sign up/in/out
   - [X] Home
-- [ ] HotFix
-  - [ ] Expenses Dynamic Render
-  - [ ] Linked Landlord Surveys
-- [ ] Readme.rdoc
-	- [ ] Update
+- [X] HotFix
+  - [X] Linked Landlord Surveys
+- [X] Readme.rdoc
+	- [X] Update
 ### SILA 0.0.1
 
 - [X] Prospect

@@ -1,0 +1,26 @@
+<tr>
+		<th>Expenses</th>
+		<td>
+			<table class="table table-striped table-bordered">
+				<tr>
+					<td>Name</td>
+					<td>Cost</td>
+					<td>Up-Front</td>
+					<td>Frequency</td>
+					<td>Actions</td>
+				</tr>
+				
+				<%= f.fields_for :expenses do |expense| %>
+					<%= render 'expense_fields', :f => expense %>
+				<% end %>
+				<tr class="add_sub_task">
+					<td>
+					<%= link_to_add_association 'add expense', f, :expenses %>
+					</td>
+				</tr>
+        
+			</table>
+			
+
+		</td>
+	  </tr>

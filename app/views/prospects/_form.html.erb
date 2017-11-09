@@ -47,20 +47,6 @@
 		<td><%= f.text_field :state, class: "form-control" %></td>
 	  </tr>
 	  
-	  <tr>
-		<th><%= f.label :purchase_price %></th>
-		<td><%= f.number_field :purchase_price, class: "form-control" %></td>
-	  </tr>
-	  
-	  <tr>
-		<th><%= f.label :repair_cost %></th>
-		<td><%= f.number_field :repair_cost, class: "form-control" %></td>
-	  </tr>
-	  
-	  <tr>
-		<th><%= f.label :gross_rent %></th>
-		<td><%= f.number_field :gross_rent, class: "form-control" %></td>
-	  </tr>
 	  
 	  <tr>
 		<th><%= f.label :investor %></th>
@@ -74,28 +60,19 @@
 	  
 	
 	  <tr>
-		<th>Landlord surveys
+		<th>Actions
 		<td>
-			<ul><% current_user.l_surveys.joins(:prospect).each do |survey| %>
+    			<%= link_to "Link a survey", l_surveys_path %>
+
+			<ul><% LSurvey.where(prospect_id: @prospect.id).each do |survey| %>
 					<li><%= link_to survey.address, edit_l_survey_path(survey) %></li>
 				<% end %>
 			</ul>
-			<%= link_to "Link a survey", l_surveys_path %>
-		</td>
-	  </tr>
-	  <tr>
-		<th>Comps</th>
-		<td>
+			<%= link_to "Link a comp", comps_path %>
+
 			<ul><% @prospect.comps.each do |comp| %>
 				<li><%= link_to comp.address, edit_comp_path(comp) %></li>
 			<% end %></ul>
-			<%= link_to "Link a comp", comps_path %>
-		</td>
-	  </tr>
-	  
-	  <tr>
-		<th>Buying strategy</th>
-		<td>
 			<% if !@prospect.b_strategy.nil? %>
 				<%= link_to "Edit buying strategy", edit_b_strategy_path(@prospect.b_strategy) %>
 			<% else %>
@@ -103,34 +80,11 @@
 			<% end %>
 		</td>
 	</tr>
-	  <tr>
-		<th>Expenses</th>
-		<td>
-			<table class="table table-striped table-bordered">
-				<tr>
-					<td>Name</td>
-					<td>Cost</td>
-					<td>Up-Front</td>
-					<td>Frequency</td>
-					<td>Actions</td>
-				</tr>
-				
-				<%= f.fields_for :expenses do |expense| %>
-					<%= render 'expense_fields', :f => expense %>
-				<% end %>
-				<tr class="add_sub_task">
-					<td>
-					<%= link_to_add_association 'add expense', f, :expenses %>
-					</td>
-				</tr>
-			</table>
-			
-
-		</td>
-	  </tr>
+	  
+    
 	  
 	  <tr class="actions">
-		<td><%= f.submit "Submit", class: "btn btn-primary" %></td>
+		<td colspan="2"><%= f.submit "Submit", class: "btn btn-primary" %></tr>
 	  </tr>
 	</table>
 <% end %>
