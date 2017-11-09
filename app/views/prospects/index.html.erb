@@ -37,7 +37,7 @@
 	</td>
       <% if prospect.user == current_user %>
         <td><%= prospect.active %></td>
-        <td><%= link_to 'Show', prospect %></td>
+        <td><%= link_to 'Show', prospect, class: 'btn btn-primary', data: { turbolinks: 'false' } %></td>
         <td><%= link_to 'Edit', edit_prospect_path(prospect) %></td>
         <td><%= link_to 'Destroy', prospect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>

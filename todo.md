@@ -30,6 +30,31 @@
 	- [ ] Add Markers for all Prospects
 - [ ] HotFix
   - [ ] Expenses Dynamic Render
+  
+### SILA 0.0.2
+###
+
+- [ ] Prospects
+  - [ ] Show
+  - [ ] Fixed prospect expenses
+    - [ ] Mortgage Loan APR %
+    - [ ] Down Payment %
+    - [ ] Closing %
+    - [ ] Insurance %
+    - [ ] Private Loan %
+  - [ ] Variable prospect expenses
+    - [ ] LTV
+    - [ ] Vacancy %
+    - [ ] Repair %
+    - [ ] Cap EX %
+    - [ ] Annual Tax
+  - [ ] Mortgage (P+I)
+  - [ ] 50% Rule
+  - [ ] Gross Income
+  - [ ] Net Income
+  - [ ] Cash In
+  - [ ] 1% Rule
+  
 ### SILA 0.0.2
 ###
 

@@ -9,6 +9,43 @@ class ProspectsController < ApplicationController
   # GET /prospects/1
   # GET /prospects/1.json
   def show
+    #Variable Expenses
+      @vacancy_percentage = 0.1
+      @repair_percentage = 0.05
+      @cap_ex = 0.05
+    #Purchase
+      @max_price = @prospect.b_strategy.max_price
+      @closing_cost = @max_price * 0.02
+    #Aquisition
+      @down_payment = @max_price * 0.035
+      @loan_amount = @max_price - @down_payment
+      @total_amount = @loan_amount + @closing_cost
+      @cash_in = @closing_cost + @down_payment
+    #Fixed Expenses
+      @monthly_interest = @loan_amount * 0.045 / 12
+      @monthly_principal = @loan_amount / 360
+      @monthly_tax = 738 / 12
+      @mortgage_payment = @monthly_interest + @monthly_principal
+      @insurance_payment = @loan_amount * 0.01 / 12
+      @pmi_payment = @loan_amount * 0.010 /12
+      @total_fixed = @mortgage_payment + @insurance_payment + @monthly_tax + @pmi_payment
+    #Income
+      @gross_income = 1300
+      @net_income = @gross_income - @mortgage_payment - ( @gross_income * @vacancy_percentage) - ( @gross_income * @repair_percentage ) - ( @gross_income * @cap_ex ) - @insurance_payment - @monthly_tax
+      @fifty_rule = ( @gross_income / 2 ) - @mortgage_payment 
+      @one_percent_rule = @loan_amount * 0.01
+      @two_percent_rule = @loan_amount * 0.02
+    #Variable Expenses
+      @vacancy_payment = @vacancy_percentage * @gross_income
+      @repair_payment = @repair_percentage * @gross_income
+      @cap_ex_payment = @cap_ex * @gross_income
+      @total_variable = @vacancy_payment + @repair_payment + @cap_ex_payment
+      @total_expense = @total_variable + @total_fixed
+    #Gmaps4Rails
+      @hash = Gmaps4rails.build_markers(@prospect) do |house, marker|
+        marker.lat house.latitude
+        marker.lng house.longitude
+      end
   end
 
   # GET /prospects/new
