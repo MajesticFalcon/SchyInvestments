@@ -46,6 +46,9 @@ class ProspectsController < ApplicationController
         marker.lat house.latitude
         marker.lng house.longitude
       end
+    #Return on Investment
+      @cash_on_cash_return = 100 * ( @net_income * 12 ) / @cash_in
+      @return_length = ( @cash_in / @net_income ).ceil
   end
 
   # GET /prospects/new

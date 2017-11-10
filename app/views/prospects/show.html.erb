@@ -1,34 +1,28 @@
 
 <p id="notice"><%= notice %></p>
-<h1>Prospects</h1>
 
 <div class="row">
-  <div id="prospect-header">
-    <div id="prospect-header-information" class="col-md-8 col-sm-8">
-      
-      <%= @prospect.name %><br>
-      <%= @prospect.address %>, 
-      <%= @prospect.city %>, 
-      <%= @prospect.state %> 
-      <%= @prospect.zip %> 
-    </div>
-    <div id="prospect-header-img" class="col-md-4 col-sm-4">
-      <table class="table table-striped table-bordered">
-        <tr><td>test</td></tr>
-      </table>
-    </div>
+  <div style="text-align: center">
+    <h3>Overview</h3>
+    
   </div>
 </div>
 
 <hr>
-
 <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading" style="text-align: center">Breakdown</div>
+    </div>
+</div>
+<div class="row">
+
   <div class="col-md-4 col-lg-4 col-sm-4">
+
     <table class="table table-striped table-bordered">
       <thead>
-        <tr>
+        <tr class="bg-primary">
           <td colspan="2" style="text-align: center">
-            Purchasing
+            Purchasing <span><i class="fa fa-usd"></i></span>
           </td>
         </tr>
         <tr>
@@ -63,9 +57,9 @@
     </table>
     <table class="table table-striped table-bordered">
       <thead>
-        <tr>
+        <tr class="bg-primary">
           <td colspan="2" style="text-align: center">
-            Acquisition
+            Acquisition <span><i class="fa fa-home"></i></span>
           </td>
         </tr>
         <tr>
@@ -101,9 +95,9 @@
     </table>
     <table class="table table-striped table-bordered">
       <thead>
-        <tr>
+        <tr class="bg-primary">
           <td colspan="2" style="text-align: center">
-            Monthly Income
+            Monthly Income <span><i class="fa fa-money"></i></span>
           </td>
         </tr>
         <tr>
@@ -163,9 +157,9 @@
     
     <table class="table table-striped table-bordered">
       <thead>
-        <tr>
+        <tr class="bg-primary">
           <td colspan="2" style="text-align: center">
-            Fixed Monthly Expenses
+            Fixed Monthly Expenses <span><i class="fa fa-money"></i></span>
           </td>
         </tr>
         <tr>
@@ -216,9 +210,9 @@
     </table>
     <table class="table table-striped table-bordered">
       <thead>
-        <tr>
+        <tr class="bg-primary">
           <td colspan="2" style="text-align: center">
-            Variable Monthly Expenses
+            Variable Monthly Expenses <span><i class="fa fa-money"></i></span>
           </td>
         </tr>
         <tr>
@@ -269,9 +263,9 @@
     </table>
     <table class="table table-striped table-bordered">
       <thead>
-        <tr>
+        <tr class="bg-primary">
           <td colspan="2" style="text-align: center">
-            Total Expenses
+            Total Expenses <span><i class="fa fa-money"></i></span>
           </td>
         </tr>
         <tr>
@@ -323,6 +317,7 @@
     </table>
   </div>
   <div class="col-md-8 col-lg-8 col-sm-8">
+
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
@@ -334,16 +329,25 @@
       <tbody>
         <tr>
           <td>
-            Return on Investment  
+            Cash On Cash Return
           </td>
           <td>
-            return
+            <%= number_to_percentage(@cash_on_cash_return) %>
           </td>
         </tr>
+        <tr>
+          <td>
+            ROI TimeFrame
+          </td>
+          <td>
+            <%= @return_length %> Months
+          </td>
+        </tr>
+
       </tbody>
     </table>
-    <div style='width: 800px;'>
-      <div id="map" style='border: 1px solid blue; width: 800px; height: 400px;'></div>
+    <div >
+      <div id="map" style='width: 800px; height: 400px;'></div>
     </div>
   </div>
 </div>
