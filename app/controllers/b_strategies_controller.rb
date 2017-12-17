@@ -40,6 +40,9 @@ class BStrategiesController < ApplicationController
   # PATCH/PUT /b_strategies/1
   # PATCH/PUT /b_strategies/1.json
   def update
+    # raise params.inspect
+# @b_strategy,.update(:address_attributes => {:city => 'Hobart'})
+
     respond_to do |format|
       if @b_strategy.update(b_strategy_params)
         format.html { redirect_to @b_strategy, notice: 'B strategy was successfully updated.' }
@@ -69,6 +72,9 @@ class BStrategiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def b_strategy_params
-      params.require(:b_strategy).permit(:max_price, :target_price, :best_price, :first_price, :max_down_payment, :first_down_payment, :financed_amount, :interest_rate, :loan_points, :term_limit, :payment, :cash_flow, :prospect_id,:comments)
+      params.require(:b_strategy).permit(:max_price,
+      :target_price, :best_price, :first_price, :max_down_payment, 
+      :first_down_payment, :financed_amount, :interest_rate, :loan_points,
+      :term_limit, :payment, :cash_flow, :prospect_id,:comments, loan_type_attributes: [:b_strategy_id, :apr])
     end
 end

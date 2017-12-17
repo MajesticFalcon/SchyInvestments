@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109011347) do
+ActiveRecord::Schema.define(version: 20171127034026) do
 
   create_table "b_strategies", force: :cascade do |t|
     t.integer  "max_price",        limit: 4
@@ -27,7 +27,10 @@ ActiveRecord::Schema.define(version: 20171109011347) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.integer  "prospect_id",      limit: 4
+    t.integer  "loan_type_id",     limit: 4
   end
+
+  add_index "b_strategies", ["loan_type_id"], name: "fk_rails_335979e3b9", using: :btree
 
   create_table "comps", force: :cascade do |t|
     t.integer  "street_num",     limit: 4
@@ -83,6 +86,16 @@ ActiveRecord::Schema.define(version: 20171109011347) do
     t.datetime "updated_at",                         null: false
     t.integer  "prospect_id",            limit: 4
     t.integer  "user_id",                limit: 4
+  end
+
+  create_table "loan_types", force: :cascade do |t|
+    t.float    "apr",               limit: 24
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "name",              limit: 255
+    t.float    "min_down_payment",  limit: 24
+    t.boolean  "morgage_insurance"
+    t.integer  "b_strategy_id",     limit: 4
   end
 
   create_table "motivations", force: :cascade do |t|
@@ -142,5 +155,6 @@ ActiveRecord::Schema.define(version: 20171109011347) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "b_strategies", "loan_types"
   add_foreign_key "comps", "prospects"
 end

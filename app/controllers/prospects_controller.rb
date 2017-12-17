@@ -9,6 +9,10 @@ class ProspectsController < ApplicationController
   # GET /prospects/1
   # GET /prospects/1.json
   def show
+
+    # if @prospect.b_strategy.nil?
+
+    # end
     #Variable Expenses
       @vacancy_percentage = 0.1
       @repair_percentage = 0.05
@@ -17,20 +21,22 @@ class ProspectsController < ApplicationController
       @max_price = @prospect.b_strategy.max_price
       @closing_cost = @max_price * 0.02
     #Aquisition
-      @down_payment = @max_price * 0.035
+      @down_payment = @max_price * 0.2
+      # @down_payment = @max_price * @prospect.b_strategy.loan_type.min_down_payment
       @loan_amount = @max_price - @down_payment
       @total_amount = @loan_amount + @closing_cost
       @cash_in = @closing_cost + @down_payment
     #Fixed Expenses
       @monthly_interest = @loan_amount * 0.045 / 12
       @monthly_principal = @loan_amount / 360
-      @monthly_tax = 738 / 12
+      @monthly_tax = @loan_amount * 0.0115 / 12
       @mortgage_payment = @monthly_interest + @monthly_principal
       @insurance_payment = @loan_amount * 0.01 / 12
-      @pmi_payment = @loan_amount * 0.010 /12
+      @pmi_payment = 0
+      # @pmi_payment = @loan_amount * 0.010 /12
       @total_fixed = @mortgage_payment + @insurance_payment + @monthly_tax + @pmi_payment
     #Income
-      @gross_income = 1300
+      @gross_income = 600
       @net_income = @gross_income - @mortgage_payment - ( @gross_income * @vacancy_percentage) - ( @gross_income * @repair_percentage ) - ( @gross_income * @cap_ex ) - @insurance_payment - @monthly_tax
       @fifty_rule = ( @gross_income / 2 ) - @mortgage_payment 
       @one_percent_rule = @loan_amount * 0.01
@@ -46,6 +52,20 @@ class ProspectsController < ApplicationController
         marker.lat house.latitude
         marker.lng house.longitude
       end
+    #Refinancing
+      @amv = @max_price / 0.7
+      @ref_diff = @amv - @max_price
+      @left_over = @ref_diff - @cash_in
+    #Fixed Expenses
+      @monthly_interest_amv = @amv * 0.045 / 12
+      @monthly_principal_amv = @amv / 360
+      @monthly_tax_amv = @amv * 0.0115 / 12
+      @mortgage_payment_amv = @monthly_interest + @monthly_principal
+      @insurance_payment_amv = @loan_amount * 0.01 / 12
+      @pmi_payment_amv = 0
+      # @pmi_payment = @loan_amount * 0.010 /12
+      @total_fixed_amv = @mortgage_payment_amv + @insurance_payment_amv + @monthly_tax_amv + @pmi_payment_amv
+    
     #Return on Investment
       @cash_on_cash_return = 100 * ( @net_income * 12 ) / @cash_in
       @return_length = ( @cash_in / @net_income ).ceil

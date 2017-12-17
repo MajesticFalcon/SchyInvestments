@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
 <table class="table table-striped table-bordered">
   <tr>
     <td>
@@ -49,17 +48,6 @@
     </td>
   </tr>
   
-
-  
-  <tr>
-    <td>
-    <%= f.label :interest_rate %><br>
-    </td>
-    <td>
-    <%= f.number_field :interest_rate, class: "form-control" %>
-    </td>
-  </tr>
-  
   <tr>
     <td>
     <%= f.label :loan_points %><br>
@@ -79,12 +67,15 @@
   </tr>
   
   <tr>
-    <td>
-    <%= f.label :payment %><br>
-    </td>
-    <td>
-    <%= f.number_field :payment, class: "form-control" %>
-    </td>
+    <%= f.fields_for :loan_type do |u| %>
+      <td>
+        <%= u.label :loan_type %><br>
+      </td>
+      <td>
+        <%= u.number_field :name %><br>
+
+      </td>
+    <% end %>
   </tr>
   
    <tr>
@@ -101,7 +92,7 @@
     <%= f.label :prospect %><br />
     </td>
     <td>
-    <%= f.collection_select :prospect_id, Prospect.all, :id, :address, :prompt => "Select a prospect" %>
+    <%= f.collection_select :prospect_id, Prospect.all, :id, :address, {:prompt => "Select a prospect"}, {:class=>"form-control"} %>
     </td>
   </tr>
   
